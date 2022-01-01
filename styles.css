@@ -1,0 +1,153 @@
+@font-face {
+    font-family: JetBrainsMono;
+    src: url("./fonts/JetBrainsMono-Regular.woff2") format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: JetBrainsMono;
+    src: url("./fonts/JetBrainsMono-Bold.woff2") format("woff2");
+    font-weight: bold;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box; 
+}
+
+body {
+    font-family: JetBrainsMono, Arial, Helvetica, sans-serif;
+    /* background: var(--primary);*/
+    /*color: #fff; */
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --primary: #333;
+    --secondary: #46CAE7;
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.bg-secondary {
+    background-color: var(--secondary);
+}
+
+.container {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0px;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+.navbar {
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu-item {
+    padding: 0px 16px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.menu-item a:hover {
+    transition: color 300ms ease-in-out;
+    color: var(--secondary);
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    border: 3px solid #fff;
+    border-bottom-color: var(--secondary);
+    border-right-color: var(--secondary);
+    box-shadow: 2px 2px, none;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.profile-photo img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-description {
+    width: 70%;
+    align-self: center;
+}
+
+.profile-description h3 {
+    margin-bottom: 16px;
+}
+
+.social-media {
+    margin-top: 32px;
+}
+
+.social-media img {
+    width: 32px;
+    height: 32px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--secondary);
+}
+
+.projects {
+    padding: 32px 0px;
+}
+
+.projects-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.project {
+    width: 300px;
+    height: 300px;
+    background-color: #ddd;
+    margin-bottom: 16px;
+}
+
+.contact {
+    margin: 32px 0px;
+}
