@@ -17,8 +17,9 @@
 }
 
 body {
+    position: relative;
     font-family: JetBrainsMono, Arial, Helvetica, sans-serif;
-    /* background: var(--primary);*/
+    background: var(--primary);
     /*color: #fff; */
 }
 
@@ -27,8 +28,13 @@ ul {
 }
 
 :root {
-    --primary: #333;
-    --secondary: #46CAE7;
+    --primary: #282828;
+    --secondary: #00BaFF;
+    --third: #98B1C4;
+}
+
+.text-white {
+    color: #fafafa;
 }
 
 .text-secondary {
@@ -72,7 +78,7 @@ header h1 {
 
 .menu-item a {
     text-decoration: none;
-    color: var(--primary);
+    color: var(--third);
     font-size: 1.2rem;
 }
 
@@ -84,18 +90,27 @@ header h1 {
 .profile {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 64px;
+    padding: 32px;
+    /*border: 2px solid var(--secondary);*/
+    border-radius: 8px;
+}
+
+.svg-top-wave svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
 }
 
 .profile-photo {
     width: 160px;
     height: 160px;
-    border: 3px solid #fff;
-    border-bottom-color: var(--secondary);
-    border-right-color: var(--secondary);
+    border: 3px ridge #fff var(--secondary);
     box-shadow: 2px 2px, none;
     border-radius: 50%;
     text-align: center;
+    -webkit-box-shadow: 4px 5px 15px -1px var(--secondary); 
+    box-shadow: 4px 5px 15px -1px var(--secondary);
 }
 
 .profile-photo img {
@@ -103,6 +118,10 @@ header h1 {
     width: 100%;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.illus {
+    width: 400px;
 }
 
 .profile-description {
@@ -115,7 +134,8 @@ header h1 {
 }
 
 .social-media {
-    margin-top: 32px;
+    padding: 8px 0px;
+    text-align: center;
 }
 
 .social-media img {
@@ -129,7 +149,7 @@ header h1 {
     background-color: var(--secondary);
 }
 
-.projects {
+.projects h2 {
     padding: 32px 0px;
 }
 
@@ -138,7 +158,16 @@ header h1 {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin-top: 16px;
+}
+
+.fun-box {
+    width: 50px;
+    height: 50px;
+    background: var(--third);
+    animation-name: fun-box;
+    animation-play-state: running;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 .project {
@@ -146,6 +175,8 @@ header h1 {
     height: 300px;
     background-color: #ddd;
     margin-bottom: 16px;
+    background: var(--third);
+    border-radius: 8px;
 }
 
 .contact {
