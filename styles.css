@@ -46,7 +46,7 @@ ul {
 }
 
 .container {
-    max-width: 920px;
+    max-width: 1360px;
     margin: 0 auto;
 }
 
@@ -143,6 +143,10 @@ header h1 {
     height: 32px;
 }
 
+.social-media span {
+    color: var(--secondary);
+}
+
 .divider {
     width: 100%;
     height: 1px;
@@ -171,14 +175,110 @@ header h1 {
 }
 
 .project {
-    width: 300px;
+    width: 450px;
     height: 300px;
     background-color: #ddd;
     margin-bottom: 16px;
     background: var(--third);
     border-radius: 8px;
+    object-fit: cover;
+    position: relative;
+}
+
+.project:hover .project-description {
+    opacity: 1;
+}
+
+.project-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border: 4px solid var(--secondary);;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.company, .short-info {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.company {
+    width: 200px;
+    margin: 0 auto;
+    padding: 2px 0px;
+    margin-bottom: 16px;
+    background: var(--third);
+}
+
+.short-info {
+    margin-top: 4px;
+    margin-bottom: 16px;
+}
+
+.see-more {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.see-more button {
+    color: #fff;
+    font-size: 1.1rem;
+    background: var(--secondary);
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 4px;
+}
+
+.project-techs {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.project-techs .tech {
+    color: var(--secondary);
+    margin: 2px 4px;
+    padding: 3px 6px;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    border: 2px solid var(--secondary);
+}   
+
+
+.project img {
+    width: 100%;
+    height: 100%;
 }
 
 .contact {
     margin: 32px 0px;
+}
+
+@media screen and (max-width: 428px) {
+    .profile {
+        flex-direction: column;
+    }
+    .illus {
+        width: 100%;
+    }
+    .profile-description {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects-list {
+        justify-content: center;
+    }
 }
