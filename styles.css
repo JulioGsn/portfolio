@@ -269,6 +269,10 @@ header h1 {
     .profile {
         flex-direction: column;
     }
+    .project {
+        width: 95%;
+        height: 250px;
+    }
     .illus {
         width: 100%;
     }
